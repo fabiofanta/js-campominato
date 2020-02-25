@@ -13,10 +13,12 @@ for (var i = 0; i < 16; i++) {
 }
 
 for (var i = 0; i < 16; i++) {
-    var userPrompt = parseInt(prompt("Inserisci un numero da 1 a 100"))
+    var userPrompt = parseInt(prompt("Inserisci un numero da 1 a 100"));
     if (generateNumbers.includes(userPrompt)) {
         console.log("hai perso")
         i = 16;
+    } if (i == 15) {
+        console.log("hai vinto");
     }
 }
 
