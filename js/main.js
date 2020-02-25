@@ -15,11 +15,14 @@ for (var i = 0; i < 16; i++) {
 for (var i = 0; i < 16; i++) {
     var userPrompt = parseInt(prompt("Inserisci un numero da 1 a 100"));
     if (generateNumbers.includes(userPrompt)) {
-        console.log("hai perso")
+        console.log("hai perso");
+        console.log("hai accumulato " + i + " punti");
         i = 16;
     } else if (i == 15) {
         console.log("hai vinto");
-    }  
+        console.log("hai accumulato " + (i + 1) + " punti");
+    }
+
 }
 
 
