@@ -23,18 +23,15 @@ switch (difficolta) {
 }
 
 var generateNumbers = [];
-var i = 0;
 while (generateNumbers.length < 16) {
     var generator = generaRandom(minNumber,maxNumber);
-    console.log(generator);
     if (!generateNumbers.includes(generator)) {
         generateNumbers.push(generator);
     }
     i++;
 }
 
-
-for (var i = 0; i < 16; i++) {
+for (i = 0; i < 16 ; i++) {
     var userPrompt = parseInt(prompt("Inserisci un numero da " + minNumber + " a " + maxNumber));
     if (generateNumbers.includes(userPrompt)) {
         console.log("hai perso");
@@ -44,7 +41,6 @@ for (var i = 0; i < 16; i++) {
         console.log("hai vinto");
         console.log("hai accumulato " + (i + 1) + " punti");
     }
-
 }
 
 function generaRandom(min, max) {
