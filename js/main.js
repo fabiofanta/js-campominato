@@ -17,9 +17,9 @@ for (var i = 0; i < 16; i++) {
     if (generateNumbers.includes(userPrompt)) {
         console.log("hai perso")
         i = 16;
-    } if (i == 15) {
+    } else if (i == 15) {
         console.log("hai vinto");
-    }
+    }  
 }
 
 
