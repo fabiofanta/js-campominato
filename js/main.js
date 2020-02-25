@@ -23,11 +23,16 @@ switch (difficolta) {
 }
 
 var generateNumbers = [];
-for (var i = 0; i < 16; i++) {
+var i = 0;
+while (generateNumbers.length < 16) {
     var generator = generaRandom(minNumber,maxNumber);
     console.log(generator);
-    generateNumbers.push(generator);
+    if (!generateNumbers.includes(generator)) {
+        generateNumbers.push(generator);
+    }
+    i++;
 }
+
 
 for (var i = 0; i < 16; i++) {
     var userPrompt = parseInt(prompt("Inserisci un numero da " + minNumber + " a " + maxNumber));
@@ -41,9 +46,6 @@ for (var i = 0; i < 16; i++) {
     }
 
 }
-
-
-
 
 function generaRandom(min, max) {
     numeroRandom = Math.floor(Math.random() * (max - min + 1)) + min;
