@@ -35,7 +35,7 @@ while (generateNumbers.length < randomLength) {
     }
 }
 var boom = false;
-while (promptArray.length < winNumbers && boom = false) {
+while (promptArray.length < winNumbers && boom == false) {
     var userPrompt = parseInt(prompt("Inserisci un numero da " + minNumber + " a " + maxNumber));
     if (!promptArray.includes(userPrompt)) {
         promptArray.push(userPrompt);
