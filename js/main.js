@@ -33,21 +33,20 @@ while (generateNumbers.length < 16) {
     i++;
 }
 
-for (i = 0; i < 16 ; i++) {
+while (promptArray.length < 16) {
     var userPrompt = parseInt(prompt("Inserisci un numero da " + minNumber + " a " + maxNumber));
     if (!promptArray.includes(userPrompt)) {
         promptArray.push(userPrompt);
         if (generateNumbers.includes(userPrompt)) {
             console.log("hai perso");
-            console.log("hai accumulato " + (i + 1) + " punti");
-            i = 16;
-        } else if (i == 15) {
+            console.log("hai accumulato " + (promptArray.length) + " punti");
+            promptArray.length = 16;
+        } else if (promptArray.length == 15) {
             console.log("hai vinto");
-            console.log("hai accumulato " + (i + 1) + " punti");
+            console.log("hai accumulato " + (promptArray.length + 1) + " punti");
         }
     } else {
         console.log("Hai inserito più volte il numero " + userPrompt);
-        i = 16;
     }
 
 }
