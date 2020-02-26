@@ -9,6 +9,8 @@
 */
 
 var difficolta = parseInt((prompt("Scegli un livello da 0 a 2")));
+
+}
 switch (difficolta) {
     case 0:
     var maxNumber = 100;
@@ -20,6 +22,9 @@ switch (difficolta) {
     break;
     case 2:
     var maxNumber = 50;
+    var minNumber = 1;
+    default:
+    var maxNumber = 100;
     var minNumber = 1;
 }
 
@@ -58,7 +63,7 @@ while (promptArray.length < winNumbers && boom == false) {
                 console.log("Hai inserito più volte il numero " + userPrompt);
             }
         } else {
-            console.log("Hai scritto un numero minore di " + minNumber + " o maggiore di " + maxNumber + " Inserisci un numero da " + minNumber + " a " + maxNumber);
+            console.log("Hai scritto un numero minore di " + minNumber + " o maggiore di " + maxNumber + "." + " Inserisci un numero da " + minNumber + " a " + maxNumber);
         }
     } else {
         console.log("Hai scritto una parola, scrivi un numero da " + minNumber + " a " + maxNumber);
