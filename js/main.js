@@ -25,15 +25,17 @@ switch (difficolta) {
 var generateNumbers = [];
 var promptArray = [];
 var i = 0;
-while (generateNumbers.length < 16) {
+var randomLength = 16;
+var winNumbers = maxNumber - randomLength;
+
+while (generateNumbers.length < randomLength) {
     var generator = generaRandom(minNumber,maxNumber);
     if (!generateNumbers.includes(generator)) {
         generateNumbers.push(generator);
     }
-    i++;
 }
-
-while (promptArray.length < 16) {
+var boom = false;
+while (promptArray.length < winNumbers) {
     var userPrompt = parseInt(prompt("Inserisci un numero da " + minNumber + " a " + maxNumber));
     if (!promptArray.includes(userPrompt)) {
         promptArray.push(userPrompt);
@@ -44,7 +46,7 @@ while (promptArray.length < 16) {
             } else {
                 console.log("hai accumulato " + (promptArray.length) + " punti");
             }
-            promptArray.length = 16;
+            boom = true;
         } else if (promptArray.length == 15) {
             console.log("hai vinto");
             console.log("hai accumulato " + (promptArray.length + 1) + " punti");
