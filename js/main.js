@@ -18,7 +18,7 @@ switch (difficolta) {
     var minNumber = 1;
     break;
     case 2:
-    var maxNumber = 50;
+    var maxNumber = 18;
     var minNumber = 1;
 }
 
@@ -47,9 +47,9 @@ while (promptArray.length < winNumbers && boom == false) {
                 console.log("hai accumulato " + (promptArray.length) + " punti");
             }
             boom = true;
-        } else if (promptArray.length == (winNumbers - 1)) {
+        } else if (promptArray.length == (winNumbers)) {
             console.log("hai vinto");
-            console.log("hai accumulato " + (promptArray.length + 1) + " punti");
+            console.log("hai accumulato " + (promptArray.length) + " punti");
         }
     } else {
         console.log("Hai inserito più volte il numero " + userPrompt);
