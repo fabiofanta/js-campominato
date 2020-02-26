@@ -7,7 +7,7 @@
 6-Con difficoltà 0=> tra 1 e 100, con difficoltà 1 =>  tra 1 e 80, con difficoltà 2=> tra 1 e 50
 */
 
-var difficolta = parseInt((prompt("Scegli un livello da 0 a 2")))
+var difficolta = parseInt((prompt("Scegli un livello da 0 a 2")));
 switch (difficolta) {
     case 0:
     var maxNumber = 100;
@@ -39,7 +39,7 @@ for (i = 0; i < 16 ; i++) {
         promptArray.push(userPrompt);
         if (generateNumbers.includes(userPrompt)) {
             console.log("hai perso");
-            console.log("hai accumulato " + i + " punti");
+            console.log("hai accumulato " + (i + 1) + " punti");
             i = 16;
         } else if (i == 15) {
             console.log("hai vinto");
@@ -47,6 +47,7 @@ for (i = 0; i < 16 ; i++) {
         }
     } else {
         console.log("Hai inserito più volte il numero " + userPrompt);
+        i = 16;
     }
 
 }
