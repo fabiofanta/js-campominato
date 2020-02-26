@@ -35,7 +35,7 @@ while (generateNumbers.length < randomLength) {
     }
 }
 var boom = false;
-while (promptArray.length < winNumbers) {
+while (promptArray.length < winNumbers && boom = false) {
     var userPrompt = parseInt(prompt("Inserisci un numero da " + minNumber + " a " + maxNumber));
     if (!promptArray.includes(userPrompt)) {
         promptArray.push(userPrompt);
@@ -47,7 +47,7 @@ while (promptArray.length < winNumbers) {
                 console.log("hai accumulato " + (promptArray.length) + " punti");
             }
             boom = true;
-        } else if (promptArray.length == 15) {
+        } else if (promptArray.length == (winNumbers - 1)) {
             console.log("hai vinto");
             console.log("hai accumulato " + (promptArray.length + 1) + " punti");
         }
