@@ -39,7 +39,11 @@ while (promptArray.length < 16) {
         promptArray.push(userPrompt);
         if (generateNumbers.includes(userPrompt)) {
             console.log("hai perso");
-            console.log("hai accumulato " + (promptArray.length) + " punti");
+            if (promptArray.length == 1) {
+                console.log("hai accumulato " + (promptArray.length - 1) + " punti");
+            } else {
+                console.log("hai accumulato " + (promptArray.length) + " punti");
+            }
             promptArray.length = 16;
         } else if (promptArray.length == 15) {
             console.log("hai vinto");
